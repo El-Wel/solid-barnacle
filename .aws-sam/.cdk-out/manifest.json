@@ -1,0 +1,757 @@
+{
+  "version": "15.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkWorkshopStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkWorkshopStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/CdkWorkshopStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "/Users/ellen.welstead-cloud/Code/cdk-workshop/lambda",
+              "id": "bb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8",
+              "packaging": "zip",
+              "sourceHash": "bb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8",
+              "s3BucketParameter": "AssetParametersbb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8S3Bucket91EBBA56",
+              "s3KeyParameter": "AssetParametersbb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8S3VersionKey19056037",
+              "artifactHashParameter": "AssetParametersbb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8ArtifactHash87C8F08E"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:161:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:11:19)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/HelloHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandlerServiceRole11EF7C63",
+            "trace": [
+              "new Role (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "new Function (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:328:31)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:11:19)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/HelloHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandler2E4FBA4D",
+            "trace": [
+              "new Function (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:398:35)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:11:19)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/AssetParameters/bb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8S3Bucket91EBBA56",
+            "trace": [
+              "new FileAssetParameters (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:11:19)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/AssetParameters/bb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8S3VersionKey19056037",
+            "trace": [
+              "new FileAssetParameters (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:11:19)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/AssetParameters/bb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbb1f836350b2044e3c57f8da65632c4da5c3a98a07604833997484a8365fb8f8ArtifactHash87C8F08E",
+            "trace": [
+              "new FileAssetParameters (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:348:29)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:11:19)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/HelloHitCounter/Hits/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHits7AAEBF80",
+            "trace": [
+              "new Table (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:698:18)",
+              "new HitCounter (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/hitcounter.ts:21:23)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:17:30)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/HelloHitCounter/HitCounterHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerServiceRoleD45002B8",
+            "trace": [
+              "new Role (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "new Function (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:328:31)",
+              "new HitCounter (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/hitcounter.ts:26:24)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:17:30)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/HelloHitCounter/HitCounterHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerServiceRoleDefaultPolicy1487A60A",
+            "trace": [
+              "new Policy (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/policy.ts:89:22)",
+              "Role.addToPrincipalPolicy (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:236:28)",
+              "Function.addToPrincipal (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/grant.ts:92:61)",
+              "Table.combinedGrant (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:542:29)",
+              "Table.grantReadWriteData (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:368:17)",
+              "new HitCounter (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/hitcounter.ts:37:11)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:17:30)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/HelloHitCounter/HitCounterHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerDAEA7B37",
+            "trace": [
+              "new Function (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:398:35)",
+              "new HitCounter (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/hitcounter.ts:26:24)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:17:30)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointEEF1FD8F",
+            "trace": [
+              "new RestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:466:22)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointCloudWatchRoleC3C64E0F",
+            "trace": [
+              "new Role (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "LambdaRestApi._configureCloudWatchRole (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:289:18)",
+              "new RestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:484:12)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointAccountB8304247",
+            "trace": [
+              "LambdaRestApi._configureCloudWatchRole (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:294:22)",
+              "new RestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:484:12)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointDeployment318525DA7a02bafcf1f33a692d15312adb602478",
+            "trace": [
+              "new Deployment (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:34:21)",
+              "LambdaRestApi._configureDeployment (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:318:32)",
+              "new RestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:487:10)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointDeploymentStageprodB78BEEA0",
+            "trace": [
+              "new Stage (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:136:22)",
+              "LambdaRestApi._configureDeployment (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:328:30)",
+              "new RestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:487:10)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Endpoint8024A810",
+            "trace": [
+              "LambdaRestApi._configureDeployment (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:333:7)",
+              "new RestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:487:10)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:26:5)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Endpointproxy39E2174E",
+            "trace": [
+              "new Resource (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:342:22)",
+              "new ProxyResource (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:397:5)",
+              "RootResource.addProxy (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Default/{proxy+}/ANY/ApiPermission.CdkWorkshopStackEndpoint018E8349.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYApiPermissionCdkWorkshopStackEndpoint018E8349ANYproxy747DCA52",
+            "trace": [
+              "Function.addPermission (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:140:5)",
+              "LambdaIntegration.bind (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:41:18)",
+              "new Method (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "ProxyResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:419:18)",
+              "new ProxyResource (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Default/{proxy+}/ANY/ApiPermission.Test.CdkWorkshopStackEndpoint018E8349.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYApiPermissionTestCdkWorkshopStackEndpoint018E8349ANYproxy41939001",
+            "trace": [
+              "Function.addPermission (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:140:5)",
+              "LambdaIntegration.bind (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:49:20)",
+              "new Method (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "ProxyResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:419:18)",
+              "new ProxyResource (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYC09721C5",
+            "trace": [
+              "new Method (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:116:22)",
+              "ProxyResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:419:18)",
+              "new ProxyResource (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Default/ANY/ApiPermission.CdkWorkshopStackEndpoint018E8349.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANYApiPermissionCdkWorkshopStackEndpoint018E8349ANYE84BEB04",
+            "trace": [
+              "Function.addPermission (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:140:5)",
+              "LambdaIntegration.bind (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:41:18)",
+              "new Method (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "RootResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:416:29)",
+              "new ProxyResource (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Default/ANY/ApiPermission.Test.CdkWorkshopStackEndpoint018E8349.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANYApiPermissionTestCdkWorkshopStackEndpoint018E8349ANYB6CC1B64",
+            "trace": [
+              "Function.addPermission (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:140:5)",
+              "LambdaIntegration.bind (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:49:20)",
+              "new Method (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:98:36)",
+              "RootResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:416:29)",
+              "new ProxyResource (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/Endpoint/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANY485C938B",
+            "trace": [
+              "new Method (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:116:22)",
+              "RootResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:95:12)",
+              "ProxyResource.addMethod (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:416:29)",
+              "new ProxyResource (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:406:29)",
+              "RootResource.addProxy (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:99:12)",
+              "new LambdaRestApi (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:33:17)",
+              "new CdkWorkshopStack (/Users/ellen.welstead-cloud/Code/cdk-workshop/lib/cdk-workshop-stack.ts:22:5)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (node:events:510:26)",
+              "process.emit (node:events:390:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (node:events:510:26)",
+              "process.emit (node:events:390:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit (/Users/ellen.welstead-cloud/Code/cdk-workshop/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "CdkWorkshopStack"
+    }
+  }
+}
