@@ -7,16 +7,17 @@ import styles from '../styles/Home.module.css'
 
 // function to get props runs before rendering and saves props for NextPage
 export const getServerSideProps = async () => {
-  const res = await fetch('https://pkrc1zqgl0.execute-api.ap-southeast-2.amazonaws.com/get')
-  const data: result = await res.json()
-  console.log(data)
+  const res = await fetch(endpoint+'get');
+  const data: result = await res.json();
+  console.log(data);
   return {
     props: {
       data,
     },
-  }
+  };
 }
 
+const endpoint: string = 'https://pkrc1zqgl0.execute-api.ap-southeast-2.amazonaws.com/';
 // result from api response interface
 interface result{
   "Items": TodoItem[],
@@ -26,23 +27,36 @@ interface result{
 //interface for a todo item containing string
 interface TodoItem{
   key: number;
+  taskID: string;
   task: string;
   done: boolean;
 }
 
-// hardcoding a list
-// const todoListLocal: Array<TodoItem> = [{key: 1, task: 'do washing', done: false}, {key: 2, task: 'fold washing', done: false}, {key: 2, task: 'put away washing', done: false}]
-
+async function DeleteTask(taskID:string){
+    const taskId: string = taskID
+    const fetchEndpoint: string = endpoint + 'delete';
+    const res = await fetch(fetchEndpoint);
+    console.log(res.json())
+    // Add items to the event?
+    //   method: 'DELETE',
+    //   headers: {
+    //     'content-type': 'application/json;charset=UTF-8',
+    //   },
+    //   body: JSON.stringify({
+    //     deleteKey: taskId
+    //   }),
+    // }))
+}
 // function component for printing a list
 function TodoList(props: {todos: TodoItem[]}) {
   const todos: TodoItem[] = props.todos;
   let todoList: JSX.Element[]
   // checking in case todos is undefined (has been issue when testing lambda)
   if (props.todos) {
-    todoList = todos.map((item: TodoItem) => <tr key={item.task}><input type='checkbox' id={item.task}></input>{item.task} <button id={item.task}>delete</button></tr>)
+    todoList = todos.map((item: TodoItem) => <tr key={item.task}><input type='checkbox' id={item.task}></input>{item.task} <button id={item.taskID} onClick={() => DeleteTask(item.task)}>delete</button></tr>)
   }
   else{
-    todoList = [<tr key={undefined}>Api Response message: 'Internal server error'</tr>]
+    todoList = [<tr key={undefined}>Api Response message: Internal server error</tr>]
   }
   return(
     <ul>{todoList}</ul>
@@ -67,6 +81,6 @@ const Home: NextPage<{data: result}> = ({data}) => {
     </body>
   </div>    
   )
-}
+};
 
 export default Home

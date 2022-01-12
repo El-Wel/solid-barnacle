@@ -3,7 +3,7 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 
 //define the table name
 const params = {
-  TableName : 'ToDoWebsiteStack-Todos4F51CAC2-MLXIRHV3ZN4U'
+  TableName : 'TodoTable'
 }
 
 async function listItems(){

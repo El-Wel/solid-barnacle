@@ -1,33 +1,26 @@
-var table = "ToDoWebsiteStack-Todos4F51CAC2-OWIEEF2CENN8";
+var table = "ToDoWebsiteStack-Todos4F51CAC2-MLXIRHV3ZN4U";
 
+// currently hard coded value for manually added item
+// later taskID will be from handler -> perhaps make this a class?
 var delParams = {
-    TableName:table,
+    TableName:"TodoTable",
     Key:{
-        "key": 1,
-        "task": "do washing"
+        "taskID": "do washing"
     },
-
+    ReturnValues: "ALL_OLD"
 };
 
-function deleteItem(){
-  console.log("Attempting a conditional delete...");
-  docClient.delete(delParams, function(err: any, data: any) {
-      if (err) {
-          console.error("Unable to delete item. Error JSON:", JSON.stringify(err, null, 2));
-      } else {
-          console.log("DeleteItem succeeded:", JSON.stringify(data, null, 2));
-      }
-  });
-}
 exports.handler = async (event: any, context: any) => {
-  try {
-    deleteItem()
+    // delParams.Key.taskID = event.deleteKey;
+    const response = await docClient.delete(delParams).promise();
+  //   request.
+  //   on('success', function(response) {
+  //   return("Success!"+response);
+  // }).send()
     return {
         statusCode: 200,
         headers: {"Content-Type": "text/plain"},
-        body: "Deleted"
+        body: JSON.stringify(response)
     }
-  } catch (err) {
-    return { error: err }
-  }
+
 }

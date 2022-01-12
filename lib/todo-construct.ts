@@ -6,7 +6,7 @@ import * as apigw  from '@aws-cdk/aws-apigatewayv2';
 import * as integrations from '@aws-cdk/aws-apigatewayv2-integrations';
 import * as lambdanodejs from '@aws-cdk/aws-lambda-nodejs';
 
-export class ToDoWebsiteStack extends cdk.Stack {
+export class TodoWebsiteStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
@@ -23,7 +23,8 @@ export class ToDoWebsiteStack extends cdk.Stack {
     });
     //DynamoDB Table
     const table = new dynamodb.Table(this, 'Todos', {
-      partitionKey: { name: 'path', type: dynamodb.AttributeType.STRING }
+      partitionKey: { name: 'taskID', type: dynamodb.AttributeType.STRING },
+      tableName: 'TodoTable'
     });
 
     // create lambda NodejsFunction with extension 'get'
@@ -33,6 +34,8 @@ export class ToDoWebsiteStack extends cdk.Stack {
 
     // grant the lambda role read/write permissions to our table
     table.grantReadWriteData(getLambda);
+
+    table.grantReadWriteData(deleteLambda);
 
     // declare integration for the get function
     const getIntegration = new integrations.HttpLambdaIntegration('GetIntegration', getLambda);
